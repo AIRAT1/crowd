@@ -14,15 +14,15 @@ public class CrowdApplication {
 		SpringApplication.run(CrowdApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner loadData(EmployeeRepo repository) {
-		return (args) -> {
-			repository.save(new Employee("Jack", "Bauer", ""));
-			repository.save(new Employee("Chloe", "O'Brian", ""));
-			repository.save(new Employee("Kim", "Bauer", ""));
-			repository.save(new Employee("David", "Palmer", ""));
-			repository.save(new Employee("Michelle", "Dessler", ""));
-		};
-	}
+//	@Bean
+//	public CommandLineRunner loadData(EmployeeRepo repository) {
+//		return (args) -> {
+//			repository.save(new Employee("Jack", "Bauer", ""));
+//			repository.save(new Employee("Chloe", "O'Brian", ""));
+//			repository.save(new Employee("Kim", "Bauer", ""));
+//			repository.save(new Employee("David", "Palmer", ""));
+//			repository.save(new Employee("Michelle", "Dessler", ""));
+//		};
+//	}
 
 }
