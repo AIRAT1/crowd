@@ -1,5 +1,7 @@
 package de.crowd.component;
 
+import com.vaadin.flow.component.ClickEvent;
+import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.KeyNotifier;
 import com.vaadin.flow.component.button.Button;
@@ -84,6 +86,8 @@ public class EmployeeEditor extends VerticalLayout implements KeyNotifier {
         binder.setBean(this.employee);
 
         setVisible(true);
+
+        cancel.addClickListener((ComponentEventListener<ClickEvent<Button>>) buttonClickEvent -> setVisible(false));
 
         lastName.focus();
     }
